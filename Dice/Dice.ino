@@ -1,16 +1,16 @@
-int topright = 6;
-int topleft = 2;
-int middleright = 7;
-int middlecenter = 5;
-int middleleft = 3;
-int bottomright = 8;
-int bottomleft = 4;
-int button = 9;
-int i = 1;
+int topright = 6;// topright LED Output
+int topleft = 2;// topleft LED Output
+int middleright = 7;// middleright LED Output
+int middlecenter = 5;// middlecenter LED Output
+int middleleft = 3;// middleleft LED Output
+int bottomright = 8;// bottomright LED Output
+int bottomleft = 4;// bottomleft LED Output
+int button = 9;// button to roll the dice
+int i = 1;// controls the speed of the dice
 int b = 0;
 int a = 0;
 int c = 0;
-int lastroll = 0;
+int lastroll = 0;// i save the last roll in this variable
 
 void roll1()
 {
@@ -85,7 +85,7 @@ void on()
   digitalWrite(middleleft, HIGH);
 }
 
-void actualroll() {
+void actualroll() {// this is the actual function that rolls the dice it uses noise on an analog port for the random seed
   int roll = random(1, 7);
   switch (roll) {
     case 1:
