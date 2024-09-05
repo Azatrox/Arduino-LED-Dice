@@ -1,4 +1,4 @@
-⠀⢀⡀⠀⠀⠀⠀⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠞⠋⠙⢳⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+/*⠀⢀⡀⠀⠀⠀⠀⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠞⠋⠙⢳⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠸⣷⡀⠀⣿⡄⢹⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡾⠁⠀⠀⠀⠀⢻⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⣰⡇⠀⠹⣧⠀⣻⣧⠀⠉⠀⠀⠀⠀⠀⠀⢀⣀⣤⠤⠶⠒⠛⠓⠒⠒⠲⠦⢤⣌⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠘⣿⡀⠀⢻⣷⠛⠻⣇⠀⠘⠗⠀⣠⡴⠞⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠦⣤⡴⠞⠛⠋⠉⠛⢷⠀⠀⠀⠀
@@ -22,7 +22,7 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⡀⠀⠀⠀⠀⣽⠀⠀⠀⠀⡇⠀⠀⠀⠀⢸⡟⠀⠀⠀⣨⡇⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⢤⣀⢀⣰⠃⠀⠀⠀⠀⢹⣄⠀⢀⣴⡿⠤⠴⠖⠚⠉⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠙⠛⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-
+*/
 
 int topright = 6;// topright LED Output
 int topleft = 2;// topleft LED Output
@@ -38,20 +38,20 @@ int a = 0;
 int c = 0;
 int lastroll = 0;// i save the last roll in this variable
 
-void roll1()
+void roll1()//writes a 1 to the LEDs
 {
   digitalWrite(middlecenter, HIGH);
   lastroll = 1;
 }
 
-void roll2()
+void roll2()//writes a 2 to the LEDs
 {
   digitalWrite(bottomright, HIGH);
   digitalWrite(topleft, HIGH);
    lastroll = 2;
 }
 
-void roll3()
+void roll3()//writes a 3 to the LEDs
 {
   digitalWrite(middlecenter, HIGH);
   digitalWrite(bottomright, HIGH);
@@ -59,7 +59,7 @@ void roll3()
   lastroll = 3;
 }
 
-void roll4()
+void roll4()//writes a 4 to the LEDs
 {
   digitalWrite(bottomright, HIGH);
   digitalWrite(bottomleft, HIGH);
@@ -68,7 +68,7 @@ void roll4()
   lastroll = 4;
 }
 
-void roll5()
+void roll5()//writes a 5 to the LEDs
 {
   digitalWrite(bottomright, HIGH);
   digitalWrite(bottomleft, HIGH);
@@ -78,7 +78,7 @@ void roll5()
   lastroll = 5;
 }
 
-void roll6()
+void roll6()//writes a 6 to the LEDs
 {
   digitalWrite(bottomright, HIGH);
   digitalWrite(bottomleft, HIGH);
@@ -89,7 +89,7 @@ void roll6()
   lastroll = 6;
 }
 
-void off()
+void off()//turns all LEDs OFF
 {
   digitalWrite(middlecenter, LOW);  
   digitalWrite(bottomright, LOW);
@@ -100,7 +100,7 @@ void off()
   digitalWrite(middleleft, LOW);
 }
 
-void on()
+void on()//turns all LEDs ON
 {
   digitalWrite(middlecenter, HIGH);  
   digitalWrite(bottomright, HIGH);
@@ -201,7 +201,7 @@ void loop()
 }
 
 
-void last()
+void last()//ends the program spams last called and shows the last number rolled
 {
   Serial.println("last called");
   if (c == 1)
